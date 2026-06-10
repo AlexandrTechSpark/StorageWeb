@@ -30,12 +30,12 @@ async function sendPart(part)
         const result = await response.text();
 
         document.getElementById("status").innerHTML =
-            "? Збережено: " + part;
+            "? Saved: " + part;
     }
     catch(error)
     {
         document.getElementById("status").innerHTML =
-            "? Помилка відправки";
+            "? Send error";
     }
 }
 
@@ -46,7 +46,7 @@ function onScanSuccess(decodedText)
     if (!part)
     {
         document.getElementById("status").innerHTML =
-            "Не знайдено поле Part";
+            "Cant find part number";
         return;
     }
 
