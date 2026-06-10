@@ -17,26 +17,12 @@ function extractPart(text)
     return null;
 }
 
-async function sendPart(part)
-{
-    try
-    {
-        const response = await fetch(
-            APPS_SCRIPT_URL +
-            "?part=" +
-            encodeURIComponent(part)
-        );
+function sendPart_getReq(part) {
+    const img = new Image();
+    img.src = APPS_SCRIPT_URL + "?part=" + encodeURIComponent(part);
 
-        const result = await response.text();
-
-        document.getElementById("status").innerHTML =
-            "? Saved: " + part;
-    }
-    catch(error)
-    {
-        document.getElementById("status").innerHTML =
-            "? Send error";
-    }
+    document.getElementById("status").innerHTML =
+        "✔ Sent: " + part;
 }
 
 function onScanSuccess(decodedText)
@@ -51,7 +37,7 @@ function onScanSuccess(decodedText)
         return;
     }
 
-    sendPart(part);
+    sendPart_getReq(part);
 }
 
 const scanner = new Html5QrcodeScanner(
