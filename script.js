@@ -41,7 +41,8 @@ async function sendPart(part)
 
 function onScanSuccess(decodedText)
 {
-    const part = extractPart(decodedText);
+ //   const part = extractPart(decodedText);
+ const part = (decodedText);
 
     if (!part)
     {
