@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL =
+﻿const APPS_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbzprO3pp1DOWD3mAkpyIrgO1BK2EBm8wqshg38ZFotTo0olWlMY94DgUUgkNYNOhYFWQg/exec";
 	
 
